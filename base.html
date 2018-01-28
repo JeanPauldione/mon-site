@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>learn to code</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/Styles.css">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+        crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="nav">
+            <h3 class="up">BIENVENUE</h3>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="amenu"><i class="fas fa-ellipsis-h"></i></label>
+            
+        <ul class="menu">
+    
+                <a href="index.html" title="ACCUEIL"> ACCUEIL</a>
+    
+                <a href="web.html" title="LA COMMUNICATION WEB">COM WEB</a>
+    
+                <a href="Php.html" title="PHP">PHP</a>
+        
+                <a href="base.html" title="Base de Données">BD</a>
+            
+                <a href="HtmlCss.html" title="HTML/CSS">HTML/CSS</a>
+            
+                <a href="JavaScript.html" title="JAVASCRIPT">JS</a>
+            
+                <a href="Algo.html" title="Algo">ALGO</a>
+        
+                <a href="projet.html" title="Mes projets">PROJET</a>
+            
+                <a href="News.html" title="NEWS">NEWS</a>
+            
+                <a href="Contact.html" title="CONTACT">CONTACT</a>
+        
+                <a href="Contact.html" title="Mon CV">CV</a>
+            <label for="chk" class="fmenu"><i class="fas fa-times"></i></label>
+        </ul>
+    </div>
+
+    <div class="base">
+        <h1 class="bd">PARTIE BASE DE DONNEES</h2>
+        <p><strong>DEFINITION:</strong> Une Base de Données est un ensemble d'informations(données) organisées dans des tables reliées entre elles</p>
+        <p><strong>ROLES DES BASES DE DONNEES:</strong> Une BD nous permet de stocker des informations dans un endroit pour éviter les pertes de données,
+             de temps mais aussi les oublis et éventuellement les erreurs. Il faut les mettre dans un seul endroit: on parle 
+             de <strong>CENTRALISATION</strong> mais aussi <strong>d'ORGANISATION</strong> sans organisation il n'y aura pas facilité d'accessibilité.</p>
+        <p><strong>DE QUOI A T-ON BESOIN POUR UTILISER LES BD ?</strong> Pour utliser une BD on a besoin d'un Système de Gestion de Bases de Données(SGBD):
+        C'est le logiciel de traitement texte qui permet de générer des BD. <br> exemple: Microsoft Access, Oracle, SQL serveur, Mysql, PostreeSQL etc.<br> 
+        Un SGBD doit permettre à l'utilisateur de:
+        <ul>
+            <li>Creer des BD (organisation, structuration, relation entre les données)</li>
+            <li>Insérer les données (remplir la BD)</li>
+            <li>Extraire les Données</li>
+            <li>Mettre à jour les données (modification)</li>
+        </ul>
+        Un SGBD doit remplir les fonctions suivantes:
+        <ul>
+            <li>DESCRIPTION: il doit mettre à la disposition de l'utilisateur un outil pour décrire l'ensemble des données qui seront stockées dans la BD
+                et definir la structure d'une BD.
+            </li>
+            <li>UTILISATION: elle a pour but d'offrir à l'utilisateur une interaction avec la BD sous forme de dialogue pour rechercher, selectionner
+                et modifier des données. Il y a deux types d'utilisateur: le SGBD peut etre utlisiser par un informaticien et un non informaticien. 
+                On peut y acceder de deux facon: soit à travers des programmes d'appliction (langage de programmation), soit avec les langages de 
+                de requetes (langage SQL) ce langage permet au utilisateur non informaticien d'acceder au BD.
+            </li>
+            <li>
+                INTEGRITE: L'idée principale de l'approche de BD réside dans l'intégration de toute les données de l'entreprise en un reservoir commun
+                mais il y a des risques que les données stockées soient erronées. Pour éliminer ce risque, le SGBD doit offrir à l'utilisateur la
+                posibilité de définir des règles de controle qui permettent de maintenir l'intégrité de la BD. Ces règles sont appelés les règles d'intégrité
+                ou contrainte d'intégrité.
+            </li>
+            <li>
+                CONFIDENTIALITE: la BD n'est pas accessible pour un seul utilisateur, beaucoup d'utilisateur y accedent et ces utilisateurs n'ont pas les 
+                meme droits d'acces, certains accedent à toutes la base au moment ou d'autres accede seulement à une partie.
+            </li>
+        </ul>
+        </p>
+
+        <h2 class="base">MODELE CONCEPTUEL DES DONNEES aussi appeler MODELE ENTITE ASSOCIATION</h2>
+        <p><strong>POURQUOI LA MODELISATION DES DONNEES ?</strong> C'est pour éviter la REDONDANCE ET L'INCOHÉRENCE DES DONNEES.</p>
+        <p>La construction d'une BD passe par deux chemins: soit on fait la modélisation des données en élaborant le modèle ENTITÉ ASSOCIATION
+            ou bien construire une BD en passant par la NORMALISATION: de manière globale ce sont des règles qu'on applique sur une table principale 
+            à partir de la quelle on va la scinder en sous tables pour éviter la redondance et l'incohérence.</p>
+
+            <h2 class="base">CONCEPTION DU MODELE ENTITE ASSOCIATION</h2>
+            <p>La conception du modèle entité association est l'élaboration de manière graphique des données. Il représente un aspect statique</p>
+
+
+            <h2 class="base">LES REQUETES SQL</h2>
+            <p> l'instruction SELECT: elle permet de spécifier le nom des tables et les critères de sélection des données à lire: <br>
+            Sa structure est simple: les six opérateurs que nous allons utilisé plus fréquemmen sont: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.
+            Au minimum une requete SQL SELECT devra comporté le SELECT et le FROM.<br>
+            SELECT: permet de spécifier le nom de colonnes ou de spécifier les calcules sur les colonnes, mais il permet également de renommé le nom
+            de colonnes.<br>
+            FROM: va comporté les noms de table et les opérations de jointure.<br>
+            WHERE: va exprimer  un certains nombre de condition sur le contenu des tables, ces condition peuvent etre de forme booleene donc peuvent
+            devenir complexe.<br>
+            GROUP BY: est un opérateur de regroupement en fonction des valeurs contenues dans la colonne. Il est souvent associer à HAVING.<br>
+            HAVING: est un opérateur permettant d'exprimer des critères de filtrage sur les groupes.<br>
+            ORDER BY: permet de trier en fonction des colonnes soit de facon ascendante ou descendante. </p>
+            <H3 class="base">SELECT</H3>
+            <p>Exemple de requete SELECT: <br>
+            SELECT * FROM soldat; permet d'afficher toutes les colonnes qui sont dans la table soldat. Le * va se charger de selectionner toutes les colonnes
+            disponibles. Si nous savons les colonnes dont on à besoin il vaut mieux récupérer uniquement les colonnes necessaires.<br>
+            ex: SELECT nom, prenom, grade FROM soldat; <br>
+            L'opération qui consiste à selectionner seulement certaines colonnes en laissant les autres de cote s'appelle une PROJECTION, elle est 
+            réaliser avec SELECT alors que l'ASSOCIATION se fait avec WHERE. <br>
+            ex: SELECT * FROM soldat WHERE nom = "Dione";
+            </p>
+            <H3 class="base">ORDER BY</H3>
+            <p>
+            On l'ajoute à la fin du requete afin de trier le résultat. <br>
+            ex: SELECT * FROM eleves ORDER BY age ASC; <br>
+            Va trier le résultat par age croissant. Il est possible de trier par ordre décroissant en utilisant DESC.
+            </p>
+
+            <h3 class="base">LIMIT et OFFSET</h3>
+            <p>L'opérateur LIMIT va limiter la taille du résultat selon le nombre qu'on a choisit. Si je fait LIMIT 3 je n'aurai que 3 résultat au 
+                maximum <br>
+                ex: SELECT * FROM soldat LIMIT 3; <br>
+                Il est souvent couplé à OFFSET qui permet de decaler le point de départ de la lecture du résultat. Il permet d'ignorer un certain nombre 
+                d'éléments dans l'ensemble du résultat.<br>
+                ex: SELECT * FROM soldat LIMIT 3 OFFSET 5;<br>
+                Nous demandons au Système de limiter la taille du résultat à 3 lignes mais également d'ignorer les 5 premières. Ce qui signifie que s'il
+                y a moins de 5 réponses on obtiendra rien du tout parce que le système a ignorer les 5 premiers résultat.
+            </p>
+
+            <h3 class="base">LES FONCTIONS D'AGRÉGATION</h3>
+            <p>Ce sont des fonctions qui prennent comme paramètre le nom d'une colonne et qui agrège les données de cette colonne c'est à dire qui 
+                effectue un calcul sur l'emsemble des valeurs. Les plus connues sont: max, min, sum, avg, et count.<br>
+                <strong>max:</strong> va prendre comme paramètre le nom d'une colonne et va calculer la valeur maximale de cette colonne.<br>
+                ex: SELECT max (prix) FROM phone;<br>
+                <strong>min:</strong> va faire la meme chose pour la valeur minimale.<br>
+                <strong>sum:</strong> va calculer la somme totale. On peut renommer le résultat avec AS.<br>
+                ex: SELECT sum (prix) AS "somme totale" FROM phone;<br>
+                Il convient donc de renommer le résultat afin de pouvoir le manipuler avec un nom que nous connaissons.<br>
+                <strong>avg:</strong> permet de calculer la moyenne.<br>
+                ex: SELECT avg(prix) AS "prix moyen" FROM phone;<br>
+                <strong>count(*):</strong> permet de compter le nombre d'éléments dont la valeur est connu dans une colonne.<br>
+                ex: SELECT count(*) AS "nombre de phone" FROM phone;
+            </p>
+
+            <h3 class="base">L'OPÉRATEUR LIKE</h3>
+            <p>LIKE permet d'effectuer une recherche dans une chaine de caractère c'est à dire de vérifier si la chaine de caractère ressemble
+                à un motif qu'on a choisit.<br>
+                voici le tableau eleve <p><img src="css/eleve.png" alt="tableau"></p>
+                ex1: SELECT * FROM eleve WHERE nom LIKE "di%";<br>
+                Cette recherche appliquera l'opérateur sur tous les noms dont la première lettre sera un <strong>d</strong>, cette lettre étant suivi
+                d'un nombre quelconque d'autres caractères, alors la condition sera vrai. <strong>%</strong> signifie n'importe quelle caractère au 
+                nombre indéfinit.<br> Comme resultat on aura: <p><img src="css/eleve1.png" alt="resultat"></p> <br>
+                ex2: SELECT * FROM eleve WHERE nom LIKE "d%ne";<br>
+                Cette condition va filtrer tous les noms excepter ceux commencant par "d" suivi par n'importe quelle caractère et se terminant par "ne"<br>
+                Le résultat sera: <p><img src="css/eleve2.png" alt="resultat2"></p><br>
+                Il est possible en plus du caractère "%" d'utiliser le caractère "_"(souligné). Il signifie un seul caractère quel qu'il soit.<br>
+                ex: SELECT * FROM eleve WHERE prenom LIKE "j__n"; <br>
+                Le résultat va renvoyé uniquement les prénoms qui commencent par "j" suivi de deux caractères et se terminant par "n". Donc pour cet
+                exemple le résultat sera "jean".<br>
+                LIKE est insensible à la casse c'est à dire qu'il différencie une majiscule d'une miniscule.
+            </p>
+
+            <h3 class="base">l'OPÉRATEUR DISTINCT</h3>
+            <p>Etant donné que les résultats d'une requete peuvent etre très volumineux, DISTINCT est l'opérateur qui permet de supprimer les doublons
+                dans le résultat d'une requete.<br>
+                ex: SELECT DISTINCT nom FROM eleve;
+            </p>
+            
+            <h3 class="base">L'OPÉRATEUR IN</h3>
+            <p>Il permet de tester si une valeur est présente dans un ensemble de valeur. Il est possible d'obtenir sa négation avec "NOT" <br>
+                ex: SELECT * FROM eleve WHERE nom IN ("dione", "diouf");
+            </p>
+
+            <h3 class="base">LES SOUS-REQUETES EN SQL</h3>
+            <p>Il en existe deux types: les sous-requetes IMBRIQUÉES et les sous-requetes CORRELÉES<br>
+                sous-requetes IMBRIQUÉES: elle est incluse dans une autre requete. Elle n'est exécutée qu'une fois.<br>
+                ex: SELECT * FROM eleve WHERE age = (SELECT MAX(age) FROM eleve);<br>
+
+                sous-requete CORRELÉES: est une sous-requete faisant référence à la requete qui l'englobe.<br>
+                ex: SELECT * FROM eleve e1 WHERE age = (SELECT MAX(age) FROM eleve WHERE nom = e1.nom);<br>
+                "e1": est le renommage de la table eleve de la requete englobante, eleve e1 est un "Alias" qui servira à désigner la table eleve de
+                la table englobante.<br>
+                nom = e1.nom: signifie que le nom dans la table eleve dans la requete correlée doit etre egale au nom qui a été lu dans la requete qui l'englobe.<br>
+                Donc on peut traduire cette requete de la facon suivante: selectionne tous les eleves de la table eleve pour les quels l'age est egal à l'age maximale
+                des eleves qui porte le meme nom.
+            </p>
+
+            <h3 class="base">LA FONCTION COUNT()</h3>
+            <p></p>
+
+        </div>
+
+           
+
+    </body>
+</html>
