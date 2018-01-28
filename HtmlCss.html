@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comprendre HTML et CSS</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/Styles.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+     integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+     crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="nav">
+		<h3 class="up">BIENVENUE</h3>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="amenu"><i class="fas fa-ellipsis-h"></i></label>
+		
+	<ul class="menu">
+
+			<a href="index.html" title="ACCUEIL"> ACCUEIL</a>
+
+			<a href="web.html" title="LA COMMUNICATION WEB">COM WEB</a>
+
+			<a href="Php.html" title="PHP">PHP</a>
+	
+			<a href="base.html" title="Base de Données">BD</a>
+		
+			<a href="HtmlCss.html" title="HTML/CSS">HTML/CSS</a>
+		
+			<a href="JavaScript.html" title="JAVASCRIPT">JS</a>
+		
+			<a href="Algo.html" title="Algo">ALGO</a>
+	
+			<a href="projet.html" title="Mes projets">PROJET</a>
+		
+			<a href="News.html" title="NEWS">NEWS</a>
+		
+			<a href="Contact.html" title="CONTACT">CONTACT</a>
+	
+			<a href="Contact.html" title="Mon CV">CV</a>
+		<label for="chk" class="fmenu"><i class="fas fa-times"></i></label>
+	</ul>
+</div>
+
+				
+	<div class="all">
+	<h1 class="what">
+		C'EST QUOI HTML ET CSS ?
+	</h1>
+
+	<div id="contenu">
+		<div class="leftbox">
+			<p class="def">
+				<strong>HTML et CSS</strong> sont deux langages qui fonctionnent ensemble et se complètent car ont deux rôles différents :<br>
+				<strong>HTML : (Hypert Text Markup Language)</strong> a fait son apparition dès 1991 lors du lancement du WEB. C’est un langage de balise qui s’occupe du contenu, du fond d’un site (boutons, menu, texte, images, vidéos etc).<br><strong>CSS : (Cascading Style Sheets)</strong> ce langage est venu compléter le HTML en 1996. C’est un langage de feuilles de style qui va permettre de styliser c’est-à-dire la mise en forme du site, le design, l’apparence, l’ergonomie (ajoute de la couleur aux boutons, aux liens, change la forme des menus, la police d’écriture etc.)<br>Donc on peut retenir que HTML définit le fond et CSS définit la forme.
+			</p>
+		</div>
+		<div class="rightbox">
+			<div class="image">
+				<p>
+					Ceci est un code CSS <br>
+					<img src="css/img/Capturecss.PNG" width="250" alt="code css">
+				</p>
+			</div>
+			<div class="image">
+				<p>
+					Ceci est un code Html<br>
+					<img src="css/img/Capturehtml.PNG" width= "280"  alt="code html">
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<h1 class="html">CONNAITRE LES BASES DU LANGAGE HTML</h1>
+	<p>
+		Le HTML fonctionne sous principe de BALISE (de petits mots clés entourés par des chevrons ex : < Balises >) elles indiquent la nature du texte qu’elle encadre ex : « ceci est le titre de la page », « ceci est une image », « ceci est un paragraphe », etc.<br> On distingue deux types de balises : les balises en paires et les balise orphelines.<br>
+		<ol>
+			<li>
+				Les balises en paires s’ouvrent, contiennent du texte et se ferme plus loin <br>ex : < titre > mon site < / titre > donc < titre > est balise ouvrante  et  < / titre > une balise fermante.<br>
+			</li>
+			<li>
+				Les balises orphelines servent le plus souvent à insérer un élément à un endroit précis (par exemple une image) ex :< image >.<br>
+			</li>
+		</ol>
+	</p>
+
+	<div id="html">
+		<div class="texte">
+			<h2 class="html">Le Doctype : < !DOCTYPE html > </h2>
+			<p>La toute première ligne s’appelle doctype. Elle est indispensable car c'est elle qui indique qu'il s'agit bien d'une page web HTML.</p>
+
+			<h2 class="html">La balise < html > </ html > </h2>
+			<p>C'est la balise principale du code, elle va contenir l’ensemble de la page. Elle contient deux sous balises l’en-tête < head > </ head > et le corps < body > </ body >. ces deux balises constituent les deux parties d'une pade web.
+			<h2 class="html">L’en-tête < head >  < / head > : </h2>
+			<p>elle gère la première page, grâce à elle on peut s’occuper de tout ce qui sera globalement interne au site comme son titre, l'encodage (pour la gestion des caractères spéciaux), le référencement de la page, la liaison avec les feuilles de style (css).</p>
+
+			<h2 class="html">L’encodage (charset) < meta charset="utf-8"  /> :</h2>
+			<p>C'est lui qui détermine comment les caractères spéciaux vont s'afficher (accents, idéogrammes chinois et japonais, caractères arabes, etc.).</p>
+
+			<h2 class="html">Le titre principal de la page < title > < title > :</h2>
+			<p>C'est le titre de la page, probablement l'élément le plus important ! Toute page doit avoir un titre qui décrit ce qu'elle contient. Il est conseillé de garder le titre assez court (moins de 100 caractères en général).</p>
+
+			<h2 class="html">Le corps < body > < / body> : </h2>
+			<p>elle est l’une des plus importante car c’est la que se trouve la partie principale de la page. C'est à l'intérieur du corps que nous écrirons la majeure partie de notre code.</p>
+		</div>
+
+		<div class="code">
+			<p><strong>voici notre code</strong> <br>
+			<img src="css/img/code.PNG" width = "850"alt="notre code">
+			</p>
+		</div>
+	</div>
+
+	<h2 class="html">Les commentaires : < !--  haut de page  --> </h2>
+	<p>Un commentaire en HTML est un texte qui sert simplement de mémo. Il n'est pas affiché, il n'est pas lu par l'ordinateur, cela ne change rien à l'affichage de la page.<br>
+	<strong>Quel intérêt ? </strong> Cela vous permettra de vous rappeler comment fonctionne votre page si vous revenez sur votre code source après un long moment d'absence.</p>
+
+	<h1 class="second">ORGANISER NOTRE TEXTE : </h1>
+	<p>comment rédiger des paragraphes, comment structurer notre page avec les titres, comment donner de l'importance à certains mots de nos texte, comment organiser les informations sous forme de listes.</p>
+
+	<h2 class="html">Les paragraphes :</h2>
+	<p>pour créer des paragraphes en html on utilise la balise < p > < / p >. Pour rédiger un autre paragraphe il suffit juste d’en créer un autre.</p>
+	
+	<h2 class="html">Aller à la ligne : </h2>
+	<p>C'est une balise orpheline qui sert juste à indiquer qu'on doit aller à la ligne : < br />. Elle doit obligatoirement être  à l'intérieur d'un paragraphe.</p>
+
+	<h2 class="html">Les titres : </h2>
+	<p>pour ajouter un titre on peut utiliser six niveaux de titres différents :</p>
+	<ul>
+		<li>
+			< h1 > < / h1 > : signifie « titre très important ». En général, on s'en sert pour afficher le titre de la page au début de celle-ci. 
+		</li>
+		<li>
+			< h2 > < / h2 > : signifie « titre important ». 
+		</li>
+		<li>
+			< h3 > < / h3 > : pareil, c'est un titre un peu moins important (on peut dire un « sous-titre » si vous voulez).
+		</li>
+		<li>
+			< h4 > < / h4 > : titre encore moins important.
+		</li>
+		<li>
+			< h5 > < / h5 > : titre pas important. 
+		</li>
+		<li>
+			< h6 > < / h6 > : titre vraiment, mais alors là vraiment pas important du tout.
+		</li>
+	</ul>
+
+	<h2 class="html">La mise en valeur : </h2>
+	<p>Au sein des paragraphes, certains mots sont parfois plus importants que d'autres. HTML propose différents moyens de les mettre en valeur.</p>
+	<ul>
+		<li>
+			<strong>Mettre un peu en valeur :</strong> pour mettre un peu en valeur on utilise la balise < em > < / em >. Son utilisation est simple il suffit juste d’encadrer les mots à mettre en valeur.
+		</li>
+		<li>
+			<strong>Mettre bien en valeur : </strong>pour bien mettre en valeur on utilise la balise < strong > < / strong > qui signifie « fort », « important » elle s’utilise exactement de la même manière que  < em > < / em >.
+		</li>
+		<li>
+			<strong>Marquer le texte :</strong>La balise < mark > < / mark > permet de faire ressortir visuellement une portion de texte. Elle  a pour effet de surligner le texte.
+		</li>
+	</ul>
+
+	<h1 class="second">LES LISTES</h1>
+	<p>Les listes nous permettent souvent de mieux structurer notre texte et d’ordonner nos informations. On distingue deux types de listes. Les listes non ordonnées (listes à puces) et les listes ordonnées (listes numérotées ou énumérations).</p>
+	
+	<div id="liste">
+	  <div class="liste">
+		<ol>
+		<li><strong>Une liste non ordonnée : </strong>c'est un système qui nous permet de créer une liste d'éléments sans notion d'ordre (il n'y a pas de « premier » ni de « dernier »). Pour créer une liste non ordonnée on utilise la balise < ul >  < / ul >. Puis à l’intérieure de la balise  < ul >  < /ul > on crée une nouvelle puce avec la balise   < li > < / li > ensuite une 2eme, une 3eme etc.</li>
+		<li><strong>Une liste ordonnée : </strong>Une liste ordonnée : elle fonctionne de la même façon, seule une balise change : il faut remplacer < ul >< / ul > par < ol >< / ol >. À l'intérieur de la liste, on ne change rien : on utilise toujours des balises < li >< / li > pour délimiter les éléments.</li><br>
+	  </ol>
+	 </div>
+	  <div class="img">
+	  	<div>
+	  		<p>notre code<br>
+	  			<img src="css/img/liste.PNG" width = "260"alt="notre code">
+	  		</p>
+	  	</div>
+	  	<div>
+	  		<p>resultat dans le navigateur<br>
+	  			<img src="css/img/resultat.PNG" width = "240" alt="resultat dans le navigateur">
+	  		</p>
+	  	</div>
+	  </div>
+   </div>
+
+
+	<h1 class="second">Créer des liens </h1>
+	<p>Un lien est un texte sur lequel on peut cliquer pour se rendre sur une autre page. On peut faire un lien d'une page a.html vers une page b.html, mais on peut aussi faire un lien vers un autre site (par exemple, http://www.siteduzero.com). Dans les deux cas, nous allons voir que le fonctionnement est le même.</p>
+
+	<h class="html"2>Créer un lien vers un autre site :</h2>
+	<p>Il est facile de reconnaître les liens sur une page : ils sont écrits d'une façon différente (par défaut, en bleu et soulignés) et un curseur en forme de main apparaît lorsqu'on pointe dessus.
+	Pour faire un lien on utilise la balise < a href="">< / a>.<br>Exemple: Ex : <strong>< a href="http://www.google.com"> lien vers google< / a>.</strong> Ces liens sont appelés liens absolus car on indique l’adresse complète.
+	</p>
+	
+	<h2 class="html">Créer un lien vers une autre page dans le même site :</h2>
+	<p>Pour commencer on créer d’abord des fichiers correspondant a des pages HTML différentes.<br>
+	Ex : page1.html, page2.html et page3.html. Le <strong>.html</strong> précise qu’il s’agit bien d’un fichier html.<br>
+	Ex : <strong>< a href="page1.html">la page 1< / a>.</strong> On dit que c’est un lien relatif.   
+	</p>
+
+	<h2 class="html">Créer un lien qui affiche une infobulle au survol :</h2>
+	<p>On peut utiliser l'attribut <strong>title</strong> qui affiche une bulle d'aide lorsqu'on pointe sur le lien. Cet attribut est facultatif. 
+	La bulle d'aide peut être utile pour informer le visiteur avant même qu'il n'ait cliqué sur le lien. Voici comment reproduire ce résultat :<br>ex:Code HTML :<strong>< p >Bonjour. Souhaitez-vous visiter le < a href="http://www.google.com" title="Réservé aux débutants">Site de google< / a > ?< / p ></strong>
+	</p>
+
+	<h2 class="html">Créer un lien qui ouvre une nouvelle fenêtre :</h2>
+	<p>Pour créer un lien vers une nouvelle fenetre on ajoute <strong>target="_blank"</strong> à la balise < a >.<br>exemple:code HTML <strong>< p >bonjour souhaitez vous visiter le < a href= "http://www.google.com" target="_blank">lien vers google< / a>? < / p></strong>
+	</p>
+
+	<h2 class="html">Créer un lien pour envoyer un e-mail :</h2>
+	<p>Si on veut que nos visiteurs puissent nous envoyer un e-mail, on peut utiliser des liens du type <strong>mailto</strong>. Rien ne change au niveau de la balise, on doit simplement modifier la valeur de l'attribut href comme ceci : <br>
+		Exemple:Code HTML :<strong>< p >< a href="mailto:juancarlos@gmail.com">Envoyez-moi un e-mail !</ a >< / p></strong>
+	</p>
+
+	<h2 class="html">Créer un lien pour télécharger un fichier :</h2>
+	<p>Pour créer un lien de téléchargement on procède exactement comme la création d’un lien vers un site web, mais en indiquant cette fois le nom du fichier à télécharger.
+	Par exemple nous voulons télécharger le fichier monfichier.zip. Nous allons placer ce fichier dans le même dossier que notre page web (ou dans un sous-dossier) et un lien vers ce fichier.<br> 
+	Exemple:Code HTML :<strong>< p > < a href="monfichier.zip">Télécharger le fichier< / a>< / p></strong>
+	</p>
+
+	<h1 class="second">LES IMAGES</h1>
+	<p>Il existe différents formats d'image que l'on peut utiliser sur des sites web, et on ne doit pas les choisir au hasard. En effet, les images sont parfois volumineuses à télécharger, ce qui ralentit le temps de chargement de la page (beaucoup plus que le texte !).<br>
+	Les différents formats d’images :<br>
+	Toutes les images diffusées sur Internet ont un point commun : elles sont compressées. Cela veut dire que l'ordinateur fait des calculs pour qu'elles soient moins lourdes et donc plus rapides à charger.
+	</p>
+
+	<h2 class="html">Le JPEG :</h2>
+	<p>Les images au format <strong>JPEG</strong> (Joint Photographic Expert Group) sont très répandues sur le Web. Ce format est conçu pour réduire le poids des photos (c'est-à-dire la taille du fichier associé), qui peuvent comporter plus de 16 millions de couleurs différentes. Les images JPEG sont enregistrées avec l'extension <strong>.jpg ou .jpeg.</strong> le JPEG détériore un peu la qualité de l'image, d'une façon généralement imperceptible. C'est ce qui le rend si efficace pour réduire le poids des photos.</p>
+	<h2 class="html">Le PNG :</h2>
+	<p>Le format <strong>PNG </strong>(Portable Network Graphics) est le plus récent de tous. Ce format est adapté à la plupart des graphiques (je serais tenté de dire « à tout ce qui n'est pas une photo »). Le PNG a deux gros avantages : il peut être rendu transparent et il n'altère pas la qualité de l'image.
+	Le PNG existe en deux versions, en fonction du nombre de couleurs que doit comporter l'image : 
+	<ol>
+		<li>
+			PNG 8 bits : 256 couleurs ;
+		</li>
+		<li>
+			PNG 24 bits : 16 millions de couleurs (autant qu'une image JPEG).
+		</li>
+	</ol>
+	La compression du JPEG est plus puissante sur les photos. Une photo enregistrée en JPEG se chargera toujours beaucoup plus vite que si elle était enregistrée en PNG. Je vous conseille donc toujours de réserver le format JPEG aux photos.
+	</p>
+
+	<h2 class="html">Le GIF :</h2>
+	<p>C'est un format assez vieux, qui a été néanmoins très utilisé (et qui reste très utilisé par habitude). Aujourd'hui, le PNG est globalement bien meilleur que le GIF : les images sont généralement plus légères et la transparence est de meilleure qualité. Je vous recommande donc d'utiliser le PNG autant que possible.
+	Le format GIF est limité à 256 couleurs (alors que le PNG peut aller jusqu'à plusieurs millions de couleurs).
+	Néanmoins, le GIF conserve un certain avantage que le PNG n'a pas : <strong>il peut être animé.</strong><br>
+	Si on résume, voici quel format adopter en fonction de l'image que vous avez : <br>
+	-Une photo : utilisez un JPEG.<br>
+	-N'importe quel graphique avec peu de couleurs (moins de 256) : utilisez un PNG 8 bits ou éventuellement un GIF.<br>
+	-N'importe quel graphique avec beaucoup de couleurs : utilisez un PNG 24 bits.<br>
+	-Une image animée : utilisez un GIF animé.
+	</p>
+	<h2 class="html">Bien choisir le nom de l’image :</h2>
+	<p>Si vous voulez éviter des problèmes, prenez l'habitude d'enregistrer vos fichiers avec des noms en minuscules, sans espace ni accent, par exemple : mon_image.png.<br>
+	Vous pouvez remplacer les espaces par le caractère underscore (« _ ») comme je l'ai fait ici.
+	</p>
+	<h2 class="html">Comment insérer une image :</h2>
+	<p>Pour insérer une image on utilise la balise <strong>< img / >.</strong> C'est une balise de type orpheline (comme < br / >). Cela veut dire qu'on n'a pas besoin de l'écrire en deux exemplaires comme la plupart des autres balises que nous avons vues jusqu'ici. En effet, nous n'avons pas besoin de délimiter une portion de texte, nous voulons juste insérer une image à un endroit précis.<br>
+	La balise doit être accompagnée de deux attributs obligatoires :<br>
+	<strong>-src :</strong>il permet d'indiquer où se trouve l'image que l'on veut insérer. Vous pouvez soit mettre un chemin absolu (ex. : http://www.site.com/fleur.png), soit mettre le chemin en relatif (ce qu'on fait le plus souvent). Ainsi, si votre image est dans un sous-dossier images, vous devrez taper : src="images/fleur.png" <br>
+	<strong>-alt :</strong> cela signifie « texte alternatif ». On doit toujours indiquer un texte alternatif à l'image, c'est-à-dire un court texte qui décrit ce que contient l'image. Ce texte sera affiché à la place de l'image si celle-ci ne peut pas être téléchargée (cela arrive), ou dans les navigateurs de personnes handicapées (non-voyants) qui ne peuvent malheureusement pas « voir » l'image. Cela aide aussi les robots des moteurs de recherche pour les recherches d'images. Pour la fleur, on mettrait par exemple : alt="Une fleur".<br>
+	Les images doivent se trouver obligatoirement à l'intérieur d'un paragraphe (< p >< / p >). Voici un exemple d'insertion d'image :<br>
+	Ex :Code HTML :<strong>< p > Voici une photo que j'ai prise lors de mes dernières vacances à la montagne :< br />    < img src="images/montagne.jpg" alt="Photo de montagne" /> < / p>.</strong><br>
+	Si l’image ne s'affiche pas, c'est très certainement parce que le chemin est incorrect ! Il suffit de simplifiez au maximum les noms de fichiers et de dossiers, et tout ira bien. Évitez à tout prix les accents, majuscules et espaces dans les noms de fichiers et de dossiers.
+	</p>
+	<h2 class="html">Ajouter une infobulle :</h2>
+	<p>
+	L'attribut permettant d'afficher une bulle d'aide est le même que pour les liens : il s'agit de <strong>title.</strong> Cet attribut est facultatif (contrairement à alt).<br>
+	Exemple:Code HTML :<strong>< p >Voici une photo que j'ai prise lors de mes dernières vacances à la montagne :< br />  < img src="images/montagne.jpg" alt="Photo de montagne" title="C'est beau les Alpes quand même !" /> < / p></strong>
+	</p>
+	
+	<footer>
+		<div class="copy">
+			<p>Copyright &copy;JP-Dione 2019 All Right Reserved</p>
+		 </div>
+		 <div class="fab">
+			 <p class="fab"> <a href="https://web.facebook.com/jeanpaul.dione" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a> </p>
+			 <p class="fab"> <a href="https://twitter.com/JeanPauldione2" target="_blank" title="twitter"><i class="fab fa-twitter-square"></i></a> </p>
+			 <p class="fab"> <a href="https://www.linkedin.com/in/jean-paul-dione-838550181" target="_blank" title="Linkedin"><i class="fab fa-linkedin-square"></i></a> </p>
+			 <p class="fab"> <a href="https://www.youtube.com" target="_blank" title="youtube"><i class="social fa fa-youtube-square"></i></a> </p>
+		 </div>
+	</footer>
+ </div>
+</body>
+</html>
