@@ -1,0 +1,286 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#accueil{
+	background-image: url("developper3.jpg");
+	background-repeat: no-repeat;
+}
+
+/*navigation*/
+h3.up{
+	position: relative;
+	top: 15px;
+	left: 5px;
+}
+
+div.nav{
+	background-color: orange;
+	font-size: 20px;
+	height: 70px;
+}
+.menu{
+	float: right;
+	font-size: 35px;
+}
+.menu a{
+	position: relative;
+	bottom: 25px;
+	text-decoration: none;
+	padding: 0 1px;
+	font-size: 20px;
+	transition: 0.4s;
+}
+
+.amenu,.fmenu{
+	transition: 0.4s;
+	cursor: pointer;
+	font-size: 30px;
+	position: relative;
+	bottom: 20px;
+	display: none;
+}
+.amenu{
+	float: right;
+	position: relative;
+	top: -40px;
+}
+.amenu i{
+	line-height: 100px;
+}
+
+#chk{
+	position: absolute;
+	visibility: hidden;
+	z-index: -1111;
+}
+.menu a:hover{
+	background-color: #777;
+}
+
+a{
+	border: 1px solid wheat;
+}
+
+
+/*contenu*/
+h1.dev{
+	text-align: center;
+	background-color: #777;
+	color: orange;
+}
+p.img{
+	text-align: center;
+}
+#dev{
+	padding: 0 20px;
+}
+
+#dev div{
+	display: inline-block;
+	width: 47%;
+	vertical-align: top;
+	padding:15px;
+	font-size: 18px;
+	z-index: 80;
+	
+
+}
+
+#dev div.left-box{
+	font-family: Arial;
+}
+
+#dev div.right-box{
+	display: inline-block;
+}
+h3.right{
+	text-align: center;
+}
+/*footer*/
+footer{
+	background-color: #777;
+	font-size: 20px;
+	color: orange;
+	z-index: 60;
+}
+footer div{
+	display: inline-block;
+}
+div.fab{
+	position: relative;
+	left: 600px;
+}
+p.fab a{
+background-color: gray;
+color:white;
+border: gray;
+font-size: 25px;
+}
+p.slogan{
+	text-align: center;
+	color: blue;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 30px;
+}
+/*algorithme*/
+#algo{
+	font-family: Arial;
+}
+h1.algo{
+	background-color:rgba(0, 0, 0, 0.849);
+	color: orange;
+	text-align: center;
+}
+h2.algo{
+	background-color: orange;
+	text-align: center;
+}
+h3.algo{
+	color: green;
+}
+/*html et css*/
+div.all{
+	font-family: Arial;
+	z-index: 80;
+}
+h1.what{
+	background-color:rgba(0, 0, 0, 0.849);
+	color: orange;
+	text-align: center;
+}
+p.def{
+	font-family: Arial;
+}
+#contenu div{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+div.leftbox{
+	display: inline-block;
+}
+div.rightbox{
+	display: inline-block;
+	text-align: center;
+}
+h1.html{
+	background-color: orange;
+	text-align: center;
+}
+h1.second{
+	color: green;
+	background-color: #777;
+}
+h2.html{
+	color: red;
+}
+#html div{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+div.code{
+	text-align: center;
+}
+#liste div{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+div.img{
+	text-align: center;
+}
+
+
+/*web.html*/
+h1.web, h2.web{
+	background-color:rgba(0, 0, 0, 0.849);
+	color: orange;
+	text-align: center;
+}
+
+p.toff{
+	text-align: center;
+}
+
+/*projet*/
+button{
+	background-color: orange;
+	font-size: 20px;
+}
+
+p.lien a{
+	position: relative;
+	left: 11px;
+	background-color: white;
+	border: white;
+	
+}
+
+h1.projet{
+	background-color:rgba(0, 0, 0, 0.849);
+	color: orange;
+	text-align: center;
+}
+
+/*base de donnee*/
+div.base{
+	background-color: gray;
+}
+h1.bd{
+	background-color: black;
+	color: orange;
+}
+h2.base{
+	background-color: black;
+	color: orange;
+}
+h3.base{
+	background-color: black;
+	color: orange;
+}
+
+
+@media screen and (max-width:1090px){
+	.menu{
+		position: relative;
+		top: 30px;
+		right: 40px;
+	}
+	div.nav{
+		height: 80px;
+	}
+	h3.up{
+		position: relative;
+		left: 40%;
+	}
+	
+}
+@media screen and (max-width:930px){
+	.amenu,.fmenu{
+		display: block;
+	}
+
+	.menu{
+		position: fixed;
+		width: 100%;
+		height: 70vh;
+		background: orange;
+		right: -100%;
+		top: 0;
+	}
+
+	.menu a{
+		display: block;	
+	}
+
+	h3.up{
+		float: left;
+	}
+
+	#chk:checked ~ .menu{
+		right: 0;
+	}
+}
