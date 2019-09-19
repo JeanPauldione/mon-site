@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GIT ET GITHUB</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="Styles.css">
+    </head>
+    <body>
+        <h1>GIT ET GITHUB</h1>
+        <p>Le developpeur, dans le cadre de son travail sur un projet ou autre a tendance à creer, sauvegarder, modifier,
+             sauvegarder à nouveau ou bien supprimer un fichier, un text etc. Toutes ses taches peuvent etre automatiser et pour chaque document
+            on peut connaitre la date de modification, ce qu'on a modifier, pourquoi on a modifier et qui a fait la modification.
+        Si on veut tracker les versions, travailler en équipe et garder une historique de tous les changements, Git et GITHUB
+    sont deux outils qui nous permettent de faire ses actions.</p>
+
+    <h2>C'EST QUOI GIT ?</h2>
+    <p>GIT est un outil en ligne de commande qui nous permet de versionner nos fichier. Il est crée en 2005 par Linus Torvald.
+        Versionner son code revient à garder les traces de toutes les modifications faitent sur son code, c'est qu'on appelle 
+        un COMMIT donc une version du code.
+    </p>
+    <h2>UTILISATION DE GIT</h2>
+    <p>Pour untilser GIT il y'a quelques procédés que l'on doit respecter. La première c'est de l'installer dans votre pc. Pour 
+        notre cas nous utilisons linux. Apres avoir mis à jour les packages avec la commande "sudo apt update" on peut executer 
+        la commande "sudo apt install git". Aprés l'installation il nous faudra le configuré en lui disant qui on est avec: <br>
+        git config --global user.name "votre nom" <br>
+        git config --global user.email "votre adresse email" <br>
+        Pour verifier la version installer on utilise la commande "git --version", si la version s'affiche c'est parce que
+        l'installation a bien marché. 
+    </p>
+
+    <h2>LES COMMANDES DE BASE</h2>
+    <p>Pour commencer nous allons creer un nouveau projet en utilisant la commande "mkdr nom_dossier" ex: mkdir monprojet.
+        Après la création du dossier on se place dans le dossier en utilisant "cd monprojet". Ensuite on demande a <strong>git</strong>
+        de commencer à versionner notre code avec la commande "git init". <br>
+        Après cela on crée un fichier index.html dans notre dossier monprojet puis on tape la commande "git status" qui nous informe 
+        sur ce qui se passe sur le projet donc il nous dira qu'il y a des fichiers qui comme index.html qui ne sont pas trackés. <br>
+        Pour commencer à surveiller les chngements on devra faire un <strong>commit</strong> c'est a dire une photographie de l'état
+        du projet. Pour ce faire de devrons passer par deux étapes: <br>
+        La première est d'ajouter un fichier. Dans notre cas on fait la commande "git add index.html".<br>
+        La deuxième étape sera de prendre le photo avec la commande "git commit -m'message'" cette commande est toujours associer à
+        un message pour dire le pourquoi on a fait le commit. ex: "git commit -m 'mon premier fichier'". Pour voir tous les COMMIT
+        on utilise la commande "git log" qui va lister les commit du plus recent au plus encien.
+    </p>
+
+    <h2>LES BRANCHEMENTS</h2>
+    <p>Dans notre fichier, si je veut ajouter un paragraphe j'ai la possibilité que creer une branche paragraphe avec la commande
+        "git branch paragraphe". Pour afficher les paragraphes on utilise la commande "git branch" et comme resultat au aura deux
+         branches *master et paragraphe. Si je veut me positionner dans la branche paragraphe je tape la commande "git checkout"
+         ex: dans notre cas on fera "git checkout paragraphe". Ensuite dans index.html on peut ajouter une paragraphe et si on 
+          demande le statut avec "git status" on verra un changement et pour afficher les chagements on utilse "git diff". Ensuite
+          on peut faire un commit des changements daborb en faisant "git add index.html" puis "git commit -m 'ajout de paragraphe'".
+          Donc je viens de faire un commit de la branche paragraphe. <br>
+          Si je revient sur la branche master avec "commit checkout master" on ne pourra pas voir les changement effectuer par la
+          branche paragraphe parce que qu'on a deux version de notre site sur les quels on peut naviguer, git se charge de changer les
+          fichiers dans notre disque dur. De meme si on fait des changements sur la branche master et qu'on retourne vers la branche 
+          paragraphe, on aura pas le meme resultat.
+    </p>
+
+    <h2>FUSIONNER AVEC MERGE</h2>
+    <p>On peut rapatrier le travail qu'on a fait sur la branche paragraphe dans la branche merge avec la commande "git merge paragraphe"
+       ensuite on pourra voir tous les commit avec "git log". <br>
+       Si je fait des changement sur la meme paragraphe depuis deux branches différentes, si on essaie de rapatrier git va nous dire 
+       qu'il y a un conflit et on aurra un affichage bizarre dans notre naviguateur. Pour régler ce problème les personne qui travail 
+       sur le projet devront communiquer et le solutionner. <br>
+        Une fois qu'on finit avec les branches la bonne pratique est de les supprimer, on peut le faire avec la commande 
+        "git branch -d nombranche". Si on veut supprimer une branche qu'on a pas encore merger git va nous afficher une erreur. Mais
+        si on constate des imperfections on qu'on souhaite vraiment le supprimer on peut le faire avec la commande "git branch -D nombranche".
+    </p>
+
+    <h2>C'EST QUOI GITHUB ?</h2>
+    <p>GITHUB est un site web qui permet d'heberger son code en ligne et de partager notre travail avec d'autres developpeurs. <br>
+        Pour ce faire il nous faut d'abord creer un <strong>repository</strong> dans github ensuite recuperer l'url générer et associer 
+        notre dépot distant à notre dépot local pour qu'on puisse envoyer notre projet. On peut le faire avec la commande 
+        "git remote add origin" suivi du l'url que github a creer. <br> ex: git remote add origin git@github.com/jean/monprojet.git <br>
+        C'est cette ligne de commande qu'on va taper dans notre terminal. Pour verifier les dépot distant d'un projet on utilise
+        "git remote". Après la connexion au depot distant il nous faudra déposer notre projet un utilisant la commande 
+        "git push" qui prend deux paramètre: le premier c'est ou déposer le projet ? dans notre cas c'est origine qui est la label 
+        du dépot et le deuxième est le nom de la branche à déposer, ici c'est master. Donc "git push origin master" va déposer notre 
+        projet dans github. <br>
+        Pour que mes collaborateurs puissent récuperer mon projet il faudra d'abord qu'il soit brancher au dépot distant avec la 
+        commande "git remote add" et l'url du dépot distant que l'on vient de creer, ensuite faire un "git pull origin master" pour 
+        rapatrier tous le projet du dépot distant vers le dépot local qu'il ont creer. Ses collaborateurs devrons aussi disposer 
+        d'un compte github et qu'on leur donne un accès en écriture au repository distant.
+    </p>
+
+
+</body>
+</html>
